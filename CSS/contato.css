@@ -12,11 +12,14 @@ body {
     align-items: center;
     background: url("https://i.pinimg.com/736x/23/55/cd/2355cd02b42ca6ea2dedf59c5af36e67.jpg") no-repeat center center;
     background-size: cover;
+    position: relative; 
+    overflow: hidden;
 }
 
 body::before {
     content: "";
     position: absolute;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
@@ -28,11 +31,11 @@ form {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 380px;
     padding: 30px;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -40,8 +43,9 @@ form {
 }
 
 h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 label {
@@ -54,27 +58,31 @@ input, select, textarea {
     padding: 12px;
     margin-bottom: 15px;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.9);
     font-size: 14px;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 input:focus, select:focus, textarea:focus {
     border-color: #7b2cbf;
     outline: none;
+    box-shadow: 0 0 10px rgba(123, 44, 191, 0.5);
 }
 
 button {
-    padding: 12px;
+    padding: 14px;
     border: none;
     border-radius: 8px;
     background: #7b2cbf;
     color: #fff;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
     background: #5a189a;
+    transform: translateY(-2px);
 }
